@@ -28,8 +28,6 @@ public class ProductPage {
     public ProductPage clickAddToCart(){
         WebElement AddToCartButton = driver.findElement(By.xpath(AddToCartButtonLocator));
         AddToCartButton.click();
-        //new WebDriverWait(driver, Duration.ofSeconds(50))
-        //        .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='add-remove-product-button_fieldWrap__1KvKJ']")));
         return this;
     }
 
@@ -43,8 +41,4 @@ public class ProductPage {
         searchCloseButton.click();
         return new CartPage(driver);
     }
-
-    //List<WebElement> searchAddRemove = driver.findElements(By.xpath("//*[@class='add-remove-product-button_fieldWrap__1KvKJ']"));
-
-
 }

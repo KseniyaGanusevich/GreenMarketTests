@@ -31,16 +31,10 @@ public class GreenMarketTest {
                 .passDeliveryModule()
                 .openCartPage()
                 .IsItemInCart();
-
         Assert.assertTrue( IsItemsInCart, "Appearance of item in cart is incorrect");
-    }
-    @AfterTest
-    public void firstBrowserQuit(){
-        driver.quit();
     }
     @Test
     public void findItemInCart() {
-        //WebDriver driver = new ChromeDriver();
         SearchPage searchPage = new SearchPage(driver)
                 .openPage()
                 .clickGlobalSearch()

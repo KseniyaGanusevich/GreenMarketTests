@@ -53,6 +53,7 @@ public class SearchPage {
         List<WebElement> productItem = driver.findElements(By.xpath(CurrentProductLocator));
         return productItem.size()>0;
     }
+
     public boolean IsOnlyOneItem(){
         String productItemLocator = "//div[@class='products-list_wrap__1u10W']/child::a";
         new WebDriverWait(driver, Duration.ofSeconds(50))

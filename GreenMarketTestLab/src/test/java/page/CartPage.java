@@ -12,7 +12,7 @@ import java.util.List;
 public class CartPage {
     private WebDriver driver;
     private final String NavQuantityLocator = "//*[@class='nav_quantity__qTiah' and text()=1]";
-    private final String OpenCartButton = "//*[@class='cart-wrap_cartIcon__3k7B0 nav_nav__1zZwF']";
+    private final String OpenCartButton = "//*[@class='cart-wrap_cartIcon__3k7B0 nav_nav__1zZwF']/button";
     private final String pageLink = "https://green-dostavka.by/product/grudinka-po-derevenski-mestnoe-izvestnoe-1458514/";
     private final String productItem = "//*[@class='cart-product_title__2KPLM']";
 
@@ -20,7 +20,7 @@ public class CartPage {
         this.driver = driver;
     }
     public CartPage openCartPage(){
-        new WebDriverWait(driver, Duration.ofSeconds(50))
+        new WebDriverWait(driver, Duration.ofSeconds(120))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(OpenCartButton)));
         WebElement CartButton = driver.findElement(By.xpath(OpenCartButton));
         CartButton.click();

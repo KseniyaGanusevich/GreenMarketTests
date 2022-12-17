@@ -21,7 +21,7 @@ public class CartPage {
     }
     public CartPage openCartPage(){
         new WebDriverWait(driver, Duration.ofSeconds(50))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(OpenCartButton)));
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(OpenCartButton)));
         WebElement CartButton = driver.findElement(By.xpath(OpenCartButton));
         CartButton.click();
         return this;

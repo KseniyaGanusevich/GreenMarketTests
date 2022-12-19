@@ -14,6 +14,7 @@ import page.ProductPage;
 import page.SearchPage;
 
 
+
 public class GreenMarketTest {
     public WebDriver driver = new ChromeDriver();
     @Test
@@ -29,7 +30,7 @@ public class GreenMarketTest {
         Assert.assertTrue(IsAddButtonRemotedAfterClick && IsNumberItemsInCartNavCorrect, "Adding item to cart is incorrect");
         boolean IsItemsInCart = cartPage
                 .passDeliveryModule()
-                .openCartPage()
+                //.openCartPage()
                 .IsItemInCart();
         Assert.assertTrue( IsItemsInCart, "Appearance of item in cart is incorrect");
     }
